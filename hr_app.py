@@ -1,7 +1,5 @@
-# -*- coding: utf-8 -*-
 """
 Created on Mon Sep 20 00:11:37 2021
-
 @author: SIMIYOUNG
 """
 
@@ -58,6 +56,7 @@ with st.form(key = "features"):
         
         #get departments
         dept_list =  list(df.dept.unique())#.sort(reverse=True)
+        dept_list.sort()
         dept = st.sidebar.selectbox("Select department", options = dept_list) #come back to sort it
         
         #get salaryt
@@ -69,5 +68,3 @@ with st.form(key = "features"):
         
         #predict button
         feature_run = st.form_submit_button("Run")
-
-
