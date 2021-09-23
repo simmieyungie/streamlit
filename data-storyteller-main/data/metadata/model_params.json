@@ -1,0 +1,1 @@
+{"X": ["last_evaluation", "satisfaction_level", "average_montly_hours", "time_spend_company", "promotion_last_5years", "salary"], "y": "status", "pred_type": "Regression"}

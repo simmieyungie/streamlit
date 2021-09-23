@@ -1,0 +1,13 @@
+column_name,type
+Unnamed: 0,numerical
+Emp ID,numerical
+satisfaction_level,numerical
+last_evaluation,numerical
+number_project,numerical
+average_montly_hours,numerical
+time_spend_company,numerical
+Work_accident,numerical
+promotion_last_5years,numerical
+dept,categorical
+salary,categorical
+status,categorical

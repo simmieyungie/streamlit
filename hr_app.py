@@ -6,6 +6,14 @@ Created on Mon Sep 20 00:11:37 2021
 import streamlit as st
 import pandas as pd
 
+#encoder
+#encodder
+def encoder(x):
+    if x == True:
+        return 1
+    else:
+        return 0
+
 #header and title
 st.title("HR Predictive Model")
 
@@ -51,6 +59,16 @@ with st.form(key = "features"):
         else:
             st.sidebar.write("No workaccident")
         
+        accident = encoder(accident)
+        
+        
+        #promotion
+        st.sidebar.subheader("Promotion in five years")
+        promotion = st.sidebar.checkbox("Promotion?")
+        
+        #encode promotion
+        promotion = encoder(promotion)
+        
         #department
         st.sidebar.subheader("Department")
         
@@ -68,3 +86,17 @@ with st.form(key = "features"):
         
         #predict button
         feature_run = st.form_submit_button("Run")
+        
+        #create dataframe of objects
+data = st.container()
+
+
+with data:
+    if feature_run:
+        input_features = {'satisfaction_level' : satisfaction, 'last_evaluation' : evaluation, 
+                  'number_project' : projects, 'average_montly_hours' : 
+                  hours, 'time_spend_company' : time_spent, 'Work_accident' : accident, 
+                  'promotion_last_5years' : promotion, 'dept' : dept, 'salary' : salary}
+        
+        inputs = pd.DataFrame(input_features, index=[0])
+        st.write(inputs)

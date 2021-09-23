@@ -1,0 +1,17 @@
+
+matplotlib==3.3.3
+
+numpy==1.19.5
+
+pandas==1.2.1
+
+scipy==1.5.4
+
+seaborn==0.11.1
+
+streamlit==0.75.0
+
+lightgbm==3.1.1
+
+
+
