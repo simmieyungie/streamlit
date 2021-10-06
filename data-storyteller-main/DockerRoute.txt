@@ -1,0 +1,21 @@
+Step 1:
+Upload zip file
+
+Step 2:
+unzip app.zip
+
+Step3:
+add Dockerfile (touch Dockerfile if it doesn't already exist)
+
+Step4:
+build image docker build -t streamlitapp:latest .
+
+Step5:
+Create container docker run -p 8501:8501 streamlitapp:latest
+
+
+#To pull new image
+docker pull simiadeboye/employeechurn:latest
+
+#Build
+docker run -p 8501:8501 simiadeboye/employeechurn
